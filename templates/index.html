@@ -1,0 +1,81 @@
+<html>
+
+
+<title>Classification for woman</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+<div class="content">
+    <h1 style="text-align: center">Classification for woman
+    </h1>
+
+    <div class="form">
+        <form action="/result" method="POST" >
+
+            <label for="rate">Rate Marrage</label>
+            <select name="rate" id="rate">
+                <option value="1"> Very Poor</option>
+                <option value="2">Poor</option>
+                <option value="3">Average</option>
+                <option value="4">Good</option>
+                <option value="5">Very Good</option>
+            </select>
+
+            <label for="age">Age</label>
+            <input type="number" id="age" name="age" placeholder="Women's Age" min="0">
+
+            <label for="yers">Year's of Marriage</label>
+            <input type="number" id="yers" name="yers" placeholder="Years being together" min="0">
+
+            <label for="child">Children</label>
+            <input type="number" id="child" name="child" placeholder="Number of Children's" min="0">
+
+            <label for="relig">Religious</label>
+            <select name="relig" id="relig">
+                <option value="1">Not Religious</option>
+                <option value="2">Prays some times</option>
+                <option value="3">Going to Chuch on Sundays</option>
+                <option value="4">Strongly Religious</option>
+            </select>
+
+            <label for="edu">Educational Qualification</label>
+            <select name="edu" id="edu">
+                <option value="9">Grade School</option>
+                <option value="12">High School</option>
+                <option value="14">Some College</option>
+                <option value="16">College Graduate</option>
+                <option value="17">Some Graduate School</option>
+                <option value="20">Advanced Degree</option>
+            </select>
+
+            <label for="occ">Occupation</label>
+            <select name="occ" id="occ">
+                <option value="1">Student</option>
+                <option value="2">Farming / Semi Skilled</option>
+                <option value="3">White Collar</option>
+                <option value="4">Skilled (teacher/nurse/writer/technician) </option>
+                <option value="5">Managerial / Business</option>
+                <option value="6">Professional with advanced degree)</option>
+            </select>
+
+            <label for="occhus">Occupation of Husband</label>
+            <select name="occhus" id="occhus">
+                <option value="1">Student</option>
+                <option value="2">Farming / Semi Skilled</option>
+                <option value="3">White Collar</option>
+                <option value="4">Skilled (teacher/nurse/writer/technician) </option>
+                <option value="5">Managerial / Business</option>
+                <option value="6">Professional with advanced degree)</option>
+            </select>
+
+
+            <input type="submit" value="Predict">
+        </form>
+    </div>
+
+    <div style='color:red;font-size:40px;margin: 0 auto;'>
+        {{result}}
+</div>
+
+
+</html>
+
+
